@@ -8,3 +8,4 @@ TODO:
   - when select bus, show information
 
 - recall map service every 15 sec
+- Map Pan and zoom

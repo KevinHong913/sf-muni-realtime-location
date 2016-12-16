@@ -3,8 +3,7 @@ angular.module('sfmuni', ['ui.router', 'sfmuni.navigation', 'sfmuni.map'])
 
 // allow DI for use in controllers, unit tests
 .constant('_', window._)
-.constant('X2JS', window.X2JS())
-    // use in views, ng-repeat="x in _.range(3)"
+// use in views, ng-repeat="x in _.range(3)"
 .run(function ($rootScope) {
     $rootScope._ = window._;
 })
