@@ -1,0 +1,56 @@
+@import 'partials/general';
+@import 'partials/navigation';
+@import 'partials/songs';
+
+$left-margin-width: 228px;
+
+/* For ui bootstrap */
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+body {
+	height: 100%;
+	background-color: #FFFFFF;
+	// overflow-y: hidden;
+}
+
+#wrapper {
+	// padding-top: 70px;
+}
+
+.left-panel {
+	width: $left-margin-width;
+	background-color: gray;
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100vh;
+	border-right: 1px solid $color-light-gray;
+	// float: left;
+	z-index: 10;
+
+	* {
+		color: white;
+	}
+}
+
+
+
+#main {
+	height: 100vh;
+	width: 100%;
+	overflow: auto;
+	position: relative;
+
+	.left-margin {
+		width: $left-margin-width;
+		height: 100px;
+		float: left;
+		z-index: 4;
+	}
+
+	.content-box {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+	}
+}

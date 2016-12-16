@@ -1,0 +1,29 @@
+{
+  "name": "SF Muni Live Map",
+  "version": "0.1.0",
+  "description": "SF Muni Live Map",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KevinHong913/sf-muni-realtime-location.git"
+  },
+  "author": "Kevin Hong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KevinHong913/sf-muni-realtime-location/issues"
+  },
+  "homepage": "https://github.com/KevinHong913/sf-muni-realtime-location",
+  "dependencies": {
+    "angular": "^1.3.14",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.17.6",
+    "gulp": "^3.8.11",
+    "gulp-sass": "^2.3.2",
+    "gulp-server-livereload": "^1.2.1"
+  }
+}

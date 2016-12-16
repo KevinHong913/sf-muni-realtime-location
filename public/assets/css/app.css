@@ -1,0 +1,90 @@
+#navigation-panel #nav-user-wrap {
+  height: 96px;
+  padding: 31px 0 31px 20px; }
+
+#navigation-panel #user-title-wrap > div {
+  display: inline-block; }
+
+#navigation-panel #user-title-wrap .nav-user-initial {
+  height: 34px;
+  width: 34px;
+  background-color: #1E6FB0;
+  border-radius: 50%;
+  text-align: center; }
+  #navigation-panel #user-title-wrap .nav-user-initial span {
+    color: #FFFFFF;
+    fill: #FFFFFF;
+    line-height: 34px;
+    vertical-align: middle; }
+
+#navigation-panel #user-title-wrap .nav-user-fullname {
+  margin-left: 10px; }
+  #navigation-panel #user-title-wrap .nav-user-fullname h3 {
+    color: #AAAAAA; }
+
+#navigation-panel #nav-menu .nav-menu-list {
+  list-style-type: none;
+  padding-left: 0; }
+  #navigation-panel #nav-menu .nav-menu-list li {
+    height: 48px;
+    line-height: 48px; }
+    #navigation-panel #nav-menu .nav-menu-list li:hover {
+      background-color: #5D88AF; }
+      #navigation-panel #nav-menu .nav-menu-list li:hover a span {
+        color: #FFFFFF; }
+    #navigation-panel #nav-menu .nav-menu-list li.no-hover:hover {
+      background-color: #FFFFFF; }
+      #navigation-panel #nav-menu .nav-menu-list li.no-hover:hover a span {
+        color: #AAAAAA; }
+    #navigation-panel #nav-menu .nav-menu-list li.nav-list-lv-1 span {
+      font-weight: 600;
+      margin-left: 20px;
+      font-size: 14px;
+      font-family: Helvetica, sans-serif;
+      color: #AAAAAA; }
+    #navigation-panel #nav-menu .nav-menu-list li.nav-list-lv-2 {
+      padding-left: 20px; }
+      #navigation-panel #nav-menu .nav-menu-list li.nav-list-lv-2 span {
+        font-weight: 400;
+        margin-left: 20px;
+        font-size: 14px;
+        font-family: Helvetica, sans-serif;
+        color: #AAAAAA; }
+
+.song-new {
+  padding: 20px 20px 20px; }
+
+/* For ui bootstrap */
+.nav, .pagination, .carousel, .panel-title a {
+  cursor: pointer; }
+
+body {
+  height: 100%;
+  background-color: #FFFFFF; }
+
+.left-panel {
+  width: 228px;
+  background-color: gray;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  border-right: 1px solid #D9D9D9;
+  z-index: 10; }
+  .left-panel * {
+    color: white; }
+
+#main {
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+  position: relative; }
+  #main .left-margin {
+    width: 228px;
+    height: 100px;
+    float: left;
+    z-index: 4; }
+  #main .content-box {
+    display: flex;
+    flex-direction: column;
+    position: relative; }

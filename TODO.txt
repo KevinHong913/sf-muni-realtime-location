@@ -1,0 +1,10 @@
+TODO:
+- add d3 to angular
+- try to show map
+- add services
+- add control for user to pick route
+  - add route stops
+  - show all buses
+  - when select bus, show information
+
+- recall map service every 15 sec
