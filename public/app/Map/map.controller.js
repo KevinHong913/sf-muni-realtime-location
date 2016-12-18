@@ -106,7 +106,7 @@ angular.module('sfmuni.map')
 					  .enter()
 					  .append( "path" )
 					  .attr( "class", "neighborhoodOutline")
-					  .attr("stroke", "#CCCCCC")
+					  .attr("stroke", "#DDDDDD")
 					  // .attr( "fill", "#EAEAEA" )
 					  .attr("fill", "none")
 					  .attr( "d", ctrl.geoPath );
@@ -134,7 +134,7 @@ angular.module('sfmuni.map')
 					  .enter().append( "path" )
 					  .attr( "class", "artery")
 					  .attr( "fill", "none" )
-					  .attr( "stroke", '#EEEEEE' )
+					  .attr( "stroke", '#FFF1B9' )
 					  .attr( "d", ctrl.geoPath );
 				}
 
