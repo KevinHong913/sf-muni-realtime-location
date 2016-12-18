@@ -13,7 +13,7 @@ angular.module('sfmuni.map')
 
   // GET Route List
   service.GetRouteList = function() {
-    var url = "http://webservices.nextbus.com/service/publicXMLFeed?command=routeList&a=sf-muni";
+    var url = "//webservices.nextbus.com/service/publicXMLFeed?command=routeList&a=sf-muni";
     return $http({
       method: 'GET',
       url: url,
@@ -26,7 +26,7 @@ angular.module('sfmuni.map')
 
   // GET Route Config
   service.GetRouteConfig = function(routeName) {
-    var url = "http://webservices.nextbus.com/service/publicXMLFeed?command=routeConfig&a=sf-muni&r=" + routeName;
+    var url = "//webservices.nextbus.com/service/publicXMLFeed?command=routeConfig&a=sf-muni&r=" + routeName;
     return $http({
       method: 'GET',
       url: url,
@@ -42,7 +42,7 @@ angular.module('sfmuni.map')
     var date = new Date()
     var time = date.getTime() - 12000;
     // var time = 1144953500233;
-    var url = "http://webservices.nextbus.com/service/publicXMLFeed?command=vehicleLocations&a=sf-muni&r=" + routeName + "&t=+" + time;
+    var url = "//webservices.nextbus.com/service/publicXMLFeed?command=vehicleLocations&a=sf-muni&r=" + routeName + "&t=+" + time;
     return $http({
       method: 'GET',
       url: url,
