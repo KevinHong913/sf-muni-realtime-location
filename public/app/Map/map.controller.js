@@ -1,6 +1,6 @@
 /* Map Controller */
 'use strict';
-function MapController($scope, $state, NextBusService) {
+function MapController($scope, $state, $interval, NextBusService) {
 	var vm = this;
 
 	vm.albersProjection = d3.geo.mercator()
@@ -56,10 +56,15 @@ function MapController($scope, $state, NextBusService) {
 
 	vm.initialize();
 
+	$interval(function(){
+		console.log("[REFRESH]")
+		vm.getVehicleLocation(vm.selectedRoute);
+	}, 15000);
+
 };
 
 angular.module('sfmuni.map')
-.controller('MapController', [ '$scope', '$state', 'NextBus', MapController ])
+.controller('MapController', [ '$scope', '$state', '$interval', 'NextBus', MapController ])
 
 .directive('d3Map', ['SfMapData', function(SfMapData){
 	return {
