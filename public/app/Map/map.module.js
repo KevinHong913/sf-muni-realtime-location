@@ -14,8 +14,8 @@ angular.module('sfmuni.map', [])
         url: "map",
         views: {
             'content': {
-                templateUrl: "app/Map/views/song_list.html",
-                controller: "MapController"
+                templateUrl: "app/Map/views/show_map.html",
+                // controller: "MapController as mapCtrl"
             },
             'navigation': {
                 templateUrl: "app/Navigation/navigation.view.html",

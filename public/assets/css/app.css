@@ -62,29 +62,15 @@ body {
   height: 100%;
   background-color: #FFFFFF; }
 
-.left-panel {
-  width: 228px;
-  background-color: gray;
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  border-right: 1px solid #D9D9D9;
-  z-index: 10; }
-  .left-panel * {
-    color: white; }
-
 #main {
   height: 100vh;
   width: 100%;
   overflow: auto;
   position: relative; }
-  #main .left-margin {
-    width: 228px;
-    height: 100px;
-    float: left;
-    z-index: 4; }
   #main .content-box {
     display: flex;
     flex-direction: column;
     position: relative; }
+
+svg {
+  background-color: #A3CCFF; }

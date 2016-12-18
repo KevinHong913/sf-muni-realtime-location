@@ -1,0 +1,13 @@
+<div class="map-content">
+	<div>
+		<select placeholder="Select Route" class="form-control"
+				ng-model="mapCtrl.selectedRoute"
+				ng-options="route._tag as route._title for route in mapCtrl.routeList" ng-model-options="{ debounce: 500 }">
+				<!-- <option value="" selected="selected">--</option> -->
+		</select>
+	</div>
+	<div class="map-wrapper">
+		<div d3-map style="width: 800px; height: 700px;">
+		</div>
+	</div>
+</div>
