@@ -1,5 +1,5 @@
 {
-  "name": "SF Muni Live Map",
+  "name": "SF-Muni-Live-Map",
   "version": "0.1.0",
   "description": "SF Muni Live Map",
   "main": "server.js",
