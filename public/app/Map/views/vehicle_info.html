@@ -1,0 +1,22 @@
+<div class="vehicle-info padding-15">
+	<div class="label-group">
+		<label>Vehicle ID:</label>
+		<span>{{ currentVehicle._id || 'unknown' }}</span>
+	</div>
+	<div class="label-group">
+		<label>Heading Degree:</label>
+		<span>{{ currentVehicle._heading || 'unknown' }} degree</span>
+	</div>
+	<div class="label-group">
+		<label>Speed:</label>
+		<span>{{ currentVehicle._speedKmHr || 'unknown' }}  km/hr</span>
+	</div>
+	<div class="label-group">
+		<label>Second Since Last Report:</label>
+		<span>{{ currentVehicle._secsSinceReport || 'unknown' }} sec</span>
+	</div>
+	<div class="label-group">
+		<label>Predictable:</label>
+		<span>{{ currentVehicle._predictable === true? 'Yes':'No' || 'unknown' }}</span>
+	</div>
+</div>

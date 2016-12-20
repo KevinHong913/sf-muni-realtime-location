@@ -1,13 +1,32 @@
 <div class="map-content">
-	<div>
-		<select placeholder="Select Route" class="form-control"
-				ng-model="mapCtrl.selectedRoute"
-				ng-options="route._tag as route._title for route in mapCtrl.routeList" ng-model-options="{ debounce: 500 }">
-				<!-- <option value="" selected="selected">--</option> -->
-		</select>
+	<div class="side-wrapper">
+		<div id="nav-title" class="padding-15">
+			<h2>SF Muni LIVE Map</h2>
+			<h4>Create By KEVIN HONG</h4>
+			<h4>Source:</h4>
+			<a>https://github.com/KevinHong913/sf-muni-realtime-location</a>
+		</div>
+		<div class="select-wrap form-group padding-15">
+			<h4>Select Route:</h4>
+			<div class="select-box">
+				<select placeholder="Select Route" class="form-control"
+						ng-model="mapCtrl.selectedRoute"
+						ng-options="route._tag as route._title for route in mapCtrl.routeList" ng-model-options="{ debounce: 500 }">
+						<!-- <option value="" selected="selected">--</option> -->
+				</select>
+			</div>
+			<div class="route-direction">
+				<label ng-repeat="direction in mapCtrl.routeConfig.direction">{{direction._title}}</label>
+			</div>
+		</div>
+
+		<div vehicle-info current-vehicle="mapCtrl.currentVehicle"></div>
 	</div>
 	<div class="map-wrapper">
-		<div d3-map style="width: 800px; height: 700px;">
+		<div class="left-margin"></div>
+		<div d3-map style="width: 100%; height: 100%;" class="d3-map-wrap">
+			<div d3-map-route route-config="mapCtrl.routeConfig" vehicle-location="mapCtrl.vehicleLocation" selected-route="mapCtrl.selectedRoute"></div>
+
 		</div>
 	</div>
 </div>

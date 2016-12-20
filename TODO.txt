@@ -1,9 +1,5 @@
 TODO:
-  - when select bus, show information
-
-- recall map service every 15 sec
-- Map Pan and zoom
-- Styling
+- Styling (90% done)
 
 DONE:
 - add d3 to angular
@@ -12,3 +8,6 @@ DONE:
 - add control for user to pick route
   - add route stops
   - show all buses
+- recall map service every 15 sec
+- Map Pan and zoom
+  - when select bus, show information

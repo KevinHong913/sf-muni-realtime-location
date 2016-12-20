@@ -1,0 +1,59 @@
+$content-color: $color-white;
+
+.map-content {
+    // display: inline-block;
+    width: 100%;
+    height: 100%;
+
+    #nav-title {
+        // font-size: 30px;
+        // margin-bottom: 40px;
+        height: 170px;
+        padding-top: 15px;
+        background-color: $header-color;
+
+        h2, h4 {
+            color: $color-white;
+            margin-bottom: 15px;
+        }
+        a {
+        	color: $color-white;
+        }
+    }
+
+    .side-wrapper {
+        float: left;
+        width: 25%;
+        height: 100%;
+        background-color: $content-color;
+
+        .select-wrap {
+            background-color: $select-color;
+            height: 150px;
+            padding: 15px;
+
+            .select-box {
+                margin-bottom: 10px;
+            }
+
+            .route-direction {
+            	font-size: 14px;
+            }
+
+            h4, label {
+                color: $color-white;
+                display: block;
+            }
+        }
+    }
+
+    .map-wrapper {
+        width: 100%;
+        height: 100%;
+        margin-left: 25%;
+
+        .left-margin {
+            width: 25%;
+        }
+    }
+}

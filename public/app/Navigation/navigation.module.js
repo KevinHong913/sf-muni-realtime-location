@@ -1,1 +1,0 @@
-angular.module('sfmuni.navigation', []);

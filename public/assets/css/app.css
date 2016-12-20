@@ -1,76 +1,109 @@
-#navigation-panel #nav-user-wrap {
-  height: 96px;
-  padding: 31px 0 31px 20px; }
+html, body, #wrapper, .content-box, .content {
+  height: 100%; }
 
-#navigation-panel #user-title-wrap > div {
-  display: inline-block; }
-
-#navigation-panel #user-title-wrap .nav-user-initial {
-  height: 34px;
-  width: 34px;
-  background-color: #1E6FB0;
-  border-radius: 50%;
-  text-align: center; }
-  #navigation-panel #user-title-wrap .nav-user-initial span {
-    color: #FFFFFF;
-    fill: #FFFFFF;
-    line-height: 34px;
-    vertical-align: middle; }
-
-#navigation-panel #user-title-wrap .nav-user-fullname {
-  margin-left: 10px; }
-  #navigation-panel #user-title-wrap .nav-user-fullname h3 {
-    color: #AAAAAA; }
-
-#navigation-panel #nav-menu .nav-menu-list {
-  list-style-type: none;
-  padding-left: 0; }
-  #navigation-panel #nav-menu .nav-menu-list li {
-    height: 48px;
-    line-height: 48px; }
-    #navigation-panel #nav-menu .nav-menu-list li:hover {
-      background-color: #5D88AF; }
-      #navigation-panel #nav-menu .nav-menu-list li:hover a span {
-        color: #FFFFFF; }
-    #navigation-panel #nav-menu .nav-menu-list li.no-hover:hover {
-      background-color: #FFFFFF; }
-      #navigation-panel #nav-menu .nav-menu-list li.no-hover:hover a span {
-        color: #AAAAAA; }
-    #navigation-panel #nav-menu .nav-menu-list li.nav-list-lv-1 span {
-      font-weight: 600;
-      margin-left: 20px;
-      font-size: 14px;
-      font-family: Helvetica, sans-serif;
-      color: #AAAAAA; }
-    #navigation-panel #nav-menu .nav-menu-list li.nav-list-lv-2 {
-      padding-left: 20px; }
-      #navigation-panel #nav-menu .nav-menu-list li.nav-list-lv-2 span {
-        font-weight: 400;
-        margin-left: 20px;
-        font-size: 14px;
-        font-family: Helvetica, sans-serif;
-        color: #AAAAAA; }
-
-.song-new {
-  padding: 20px 20px 20px; }
-
-/* For ui bootstrap */
-.nav, .pagination, .carousel, .panel-title a {
-  cursor: pointer; }
+h1, h2, h3, h4, h5, h6, span, label {
+  font-family: Helvetica, sans-serif; }
 
 body {
-  height: 100%;
-  background-color: #FFFFFF; }
+  background-color: #efefef; }
 
-#main {
-  height: 100vh;
+.padding-15 {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden; }
+
+.vehicle-info {
+  padding-top: 10px; }
+  .vehicle-info .label-group {
+    margin-bottom: 10px; }
+  .vehicle-info label, .vehicle-info span {
+    color: #212121; }
+  .vehicle-info label {
+    font-size: 16px;
+    margin-right: 5px; }
+  .vehicle-info span {
+    font-size: 14px; }
+
+.map-content {
   width: 100%;
-  overflow: auto;
-  position: relative; }
-  #main .content-box {
-    display: flex;
-    flex-direction: column;
-    position: relative; }
+  height: 100%; }
+  .map-content #nav-title {
+    height: 170px;
+    padding-top: 15px;
+    background-color: #1E88E5; }
+    .map-content #nav-title h2, .map-content #nav-title h4 {
+      color: #FFFFFF;
+      margin-bottom: 15px; }
+    .map-content #nav-title a {
+      color: #FFFFFF; }
+  .map-content .side-wrapper {
+    float: left;
+    width: 25%;
+    height: 100%;
+    background-color: #FFFFFF; }
+    .map-content .side-wrapper .select-wrap {
+      background-color: #64B5F6;
+      height: 150px;
+      padding: 15px; }
+      .map-content .side-wrapper .select-wrap .select-box {
+        margin-bottom: 10px; }
+      .map-content .side-wrapper .select-wrap .route-direction {
+        font-size: 14px; }
+      .map-content .side-wrapper .select-wrap h4, .map-content .side-wrapper .select-wrap label {
+        color: #FFFFFF;
+        display: block; }
+  .map-content .map-wrapper {
+    width: 100%;
+    height: 100%;
+    margin-left: 25%; }
+    .map-content .map-wrapper .left-margin {
+      width: 25%; }
 
 svg {
-  background-color: #A3CCFF; }
+  background-color: #A3CCFF;
+  position: relative; }
+  svg div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 60px;
+    height: 28px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none; }
+  svg .neighborhood {
+    fill: #EAEAEA;
+    stroke: none; }
+  svg .neighborhoodOutline {
+    fill: none;
+    stroke: #DDDDDD; }
+  svg .street {
+    fill: none;
+    stroke: #FFFFFF; }
+  svg .freeway {
+    fill: none;
+    stroke: #F5C886; }
+  svg .artery {
+    fill: none;
+    stroke: #FFF1B9; }
+  svg .routeLine {
+    fill: none;
+    stroke: #4286F4;
+    stroke-width: 2px; }
+  svg .stop {
+    fill: #4286F4;
+    stroke: #434f63;
+    stroke-width: 1px; }
+  svg .vehicle {
+    width: 12px;
+    height: 6px;
+    fill: #C12626;
+    stroke: #111111;
+    stroke-width: 1px; }
