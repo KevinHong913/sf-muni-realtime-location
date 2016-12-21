@@ -8,16 +8,23 @@
 		</div>
 		<div class="select-wrap form-group padding-15">
 			<h4>Select Route:</h4>
-			<div class="select-box">
-				<select placeholder="Select Route" class="form-control"
-						ng-model="mapCtrl.selectedRoute"
-						ng-options="route._tag as route._title for route in mapCtrl.routeList" ng-model-options="{ debounce: 500 }">
-						<!-- <option value="" selected="selected">--</option> -->
-				</select>
+			<div class="select-box form-group row" ng-repeat="route in mapCtrl.selectedRoute track by $index">
+				<h4 class="col-xs-1">#{{$index + 1}}</h4>
+				<div class="col-xs-8">
+					<select placeholder="Select Route" class="form-control"
+							ng-model="mapCtrl.selectedRoute[$index]"
+							ng-options="route._tag as route._title for route in mapCtrl.routeList">
+					</select>
+				</div>
+				<button class="col-xs-2 btn btn-default" ng-click="mapCtrl.deleteRoute($index)" ng-disabled="mapCtrl.selectedRoute.length === 1">Delete</button>
+				<div class="col-xs-1"></div>
 			</div>
-			<div class="route-direction">
+			<button class="add-route-btn btn btn-default" 
+					ng-click="mapCtrl.addNewRoute()"
+					ng-disabled="mapCtrl.selectedRoute.length === 5">Add Route</button>
+<!-- 			<div class="route-direction">
 				<label ng-repeat="direction in mapCtrl.routeConfig.direction">{{direction._title}}</label>
-			</div>
+			</div> -->
 		</div>
 
 		<div vehicle-info current-vehicle="mapCtrl.currentVehicle"></div>
@@ -25,7 +32,8 @@
 	<div class="map-wrapper">
 		<div class="left-margin"></div>
 		<div d3-map style="width: 100%; height: 100%;" class="d3-map-wrap">
-			<div d3-map-route route-config="mapCtrl.routeConfig" vehicle-location="mapCtrl.vehicleLocation" selected-route="mapCtrl.selectedRoute"></div>
+			<div d3-map-route ng-repeat="route in mapCtrl.selectedRoute track by $index"
+				 route="mapCtrl.selectedRoute[$index]" index="$index"></div>
 
 		</div>
 	</div>

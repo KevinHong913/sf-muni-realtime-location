@@ -1,5 +1,6 @@
 TODO:
 - Styling (90% done)
+- Map Pan and zoom (insert before)
 
 DONE:
 - add d3 to angular
@@ -9,5 +10,4 @@ DONE:
   - add route stops
   - show all buses
 - recall map service every 15 sec
-- Map Pan and zoom
   - when select bus, show information

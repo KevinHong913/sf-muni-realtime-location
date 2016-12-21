@@ -15,7 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden; }
+  overflow: auto; }
 
 .vehicle-info {
   padding-top: 10px; }
@@ -33,7 +33,7 @@ body {
   width: 100%;
   height: 100%; }
   .map-content #nav-title {
-    height: 170px;
+    min-height: 170px;
     padding-top: 15px;
     background-color: #1E88E5; }
     .map-content #nav-title h2, .map-content #nav-title h4 {
@@ -48,15 +48,16 @@ body {
     background-color: #FFFFFF; }
     .map-content .side-wrapper .select-wrap {
       background-color: #64B5F6;
-      height: 150px;
+      min-height: 150px;
       padding: 15px; }
-      .map-content .side-wrapper .select-wrap .select-box {
-        margin-bottom: 10px; }
-      .map-content .side-wrapper .select-wrap .route-direction {
-        font-size: 14px; }
       .map-content .side-wrapper .select-wrap h4, .map-content .side-wrapper .select-wrap label {
         color: #FFFFFF;
         display: block; }
+      .map-content .side-wrapper .select-wrap .select-box {
+        margin-bottom: 10px;
+        padding-right: 10px; }
+      .map-content .side-wrapper .select-wrap .route-direction {
+        font-size: 14px; }
   .map-content .map-wrapper {
     width: 100%;
     height: 100%;
@@ -67,17 +68,6 @@ body {
 svg {
   background-color: #A3CCFF;
   position: relative; }
-  svg div.tooltip {
-    position: absolute;
-    text-align: center;
-    width: 60px;
-    height: 28px;
-    padding: 2px;
-    font: 12px sans-serif;
-    background: lightsteelblue;
-    border: 0px;
-    border-radius: 8px;
-    pointer-events: none; }
   svg .neighborhood {
     fill: #EAEAEA;
     stroke: none; }
@@ -93,17 +83,87 @@ svg {
   svg .artery {
     fill: none;
     stroke: #FFF1B9; }
-  svg .routeLine {
+  svg .route0.routeLine {
     fill: none;
-    stroke: #4286F4;
+    stroke: #EF9A9A;
     stroke-width: 2px; }
-  svg .stop {
-    fill: #4286F4;
-    stroke: #434f63;
+  svg .route0.stop {
+    fill: #EF5350;
+    stroke: #EF5350;
     stroke-width: 1px; }
-  svg .vehicle {
+  svg .route0.vehicle {
     width: 12px;
     height: 6px;
-    fill: #C12626;
-    stroke: #111111;
+    fill: #B71C1C;
+    stroke: #FFCDD2;
     stroke-width: 1px; }
+  svg .route1.routeLine {
+    fill: none;
+    stroke: #9FA8DA;
+    stroke-width: 2px; }
+  svg .route1.stop {
+    fill: #5C6BC0;
+    stroke: #5C6BC0;
+    stroke-width: 1px; }
+  svg .route1.vehicle {
+    width: 12px;
+    height: 6px;
+    fill: #1A237E;
+    stroke: #C5CAE9;
+    stroke-width: 1px; }
+  svg .route2.routeLine {
+    fill: none;
+    stroke: #80CBC4;
+    stroke-width: 2px; }
+  svg .route2.stop {
+    fill: #26A69A;
+    stroke: #26A69A;
+    stroke-width: 1px; }
+  svg .route2.vehicle {
+    width: 12px;
+    height: 6px;
+    fill: #004D40;
+    stroke: #B2DFDB;
+    stroke-width: 1px; }
+  svg .route3.routeLine {
+    fill: none;
+    stroke: #BCAAA4;
+    stroke-width: 2px; }
+  svg .route3.stop {
+    fill: #8D6E63;
+    stroke: #8D6E63;
+    stroke-width: 1px; }
+  svg .route3.vehicle {
+    width: 12px;
+    height: 6px;
+    fill: #3E2723;
+    stroke: #D7CCC8;
+    stroke-width: 1px; }
+  svg .route4.routeLine {
+    fill: none;
+    stroke: #FFE082;
+    stroke-width: 2px; }
+  svg .route4.stop {
+    fill: #FFCA28;
+    stroke: #FFCA28;
+    stroke-width: 1px; }
+  svg .route4.vehicle {
+    width: 12px;
+    height: 6px;
+    fill: #FF6F00;
+    stroke: #FFECB3;
+    stroke-width: 1px; }
+
+.tooltip {
+  position: absolute;
+  text-align: left;
+  width: 150px;
+  height: 28px;
+  padding: 2px;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none; }
+  .tooltip span.tooltip-s {
+    font-size: 13px; }
+  .tooltip span.tooltip-v {
+    font-size: 16px; }

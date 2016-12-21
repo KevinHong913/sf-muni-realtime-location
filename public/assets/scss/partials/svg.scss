@@ -4,29 +4,42 @@ $svg-neighborhood-outline: #DDDDDD;
 $svg-streets: $color-white;
 $svg-freeways: #F5C886;
 $svg-arteries: #FFF1B9;
-$svg-routeLine: #4286F4;
-$svg-stop-fill: $svg-routeLine;
-$svg-stop-stroke: #434f63;
-$svg-vehicle-fill: #C12626;
-$svg-vehicle-stroke: #111111;
 
+// red
+$svg-routeLine0: #EF9A9A; // 200
+$svg-stop-fill0: #EF5350; // 400
+$svg-stop-stroke0: $svg-stop-fill0;
+$svg-vehicle-fill0: #B71C1C; // 900
+$svg-vehicle-stroke0: #FFCDD2; // 100
+// indigo
+$svg-routeLine1: #9FA8DA; // 200
+$svg-stop-fill1: #5C6BC0; // 400
+$svg-stop-stroke1: $svg-stop-fill1;
+$svg-vehicle-fill1: #1A237E; // 900
+$svg-vehicle-stroke1: #C5CAE9; // 100
+// Teal
+$svg-routeLine2: #80CBC4; // 200
+$svg-stop-fill2: #26A69A; // 400
+$svg-stop-stroke2: $svg-stop-fill2;
+$svg-vehicle-fill2: #004D40; // 900
+$svg-vehicle-stroke2: #B2DFDB; // 100
+// Brown
+$svg-routeLine3: #BCAAA4; // 200
+$svg-stop-fill3: #8D6E63; // 400
+$svg-stop-stroke3: $svg-stop-fill3;
+$svg-vehicle-fill3: #3E2723; // 900
+$svg-vehicle-stroke3: #D7CCC8; // 100
+// Amber
+$svg-routeLine4: #FFE082; // 200
+$svg-stop-fill4: #FFCA28; // 400
+$svg-stop-stroke4: $svg-stop-fill4;
+$svg-vehicle-fill4: #FF6F00; // 900
+$svg-vehicle-stroke4: #FFECB3; // 100
 
 svg {
     background-color: $svg-sea;
     position: relative;
 
-    div.tooltip {
-        position: absolute;
-        text-align: center;
-        width: 60px;
-        height: 28px;
-        padding: 2px;
-        font: 12px sans-serif;
-        background: lightsteelblue;
-        border: 0px;
-        border-radius: 8px;
-        pointer-events: none;
-    }
 
     .neighborhood {
         fill: $svg-neightborhoods;
@@ -53,23 +66,131 @@ svg {
         stroke: $svg-arteries;
     }
 
-    .routeLine {
-        fill: none;
-        stroke: $svg-routeLine;
-        stroke-width: 2px;
+    .route0 {
+        &.routeLine {
+            fill: none;
+            stroke: $svg-routeLine0;
+            stroke-width: 2px;
+        }
+
+        &.stop {
+            fill: $svg-stop-fill0;
+            stroke: $svg-stop-stroke0;
+            stroke-width: 1px;
+        }
+
+        &.vehicle {
+            width: 12px;
+            height: 6px;
+            fill: $svg-vehicle-fill0;
+            stroke: $svg-vehicle-stroke0;
+            stroke-width: 1px;
+        }
+    }
+    .route1 {
+        &.routeLine {
+            fill: none;
+            stroke: $svg-routeLine1;
+            stroke-width: 2px;
+        }
+
+        &.stop {
+            fill: $svg-stop-fill1;
+            stroke: $svg-stop-stroke1;
+            stroke-width: 1px;
+        }
+
+        &.vehicle {
+            width: 12px;
+            height: 6px;
+            fill: $svg-vehicle-fill1;
+            stroke: $svg-vehicle-stroke1;
+            stroke-width: 1px;
+        }
+    }
+    .route2 {
+        &.routeLine {
+            fill: none;
+            stroke: $svg-routeLine2;
+            stroke-width: 2px;
+        }
+
+        &.stop {
+            fill: $svg-stop-fill2;
+            stroke: $svg-stop-stroke2;
+            stroke-width: 1px;
+        }
+
+        &.vehicle {
+            width: 12px;
+            height: 6px;
+            fill: $svg-vehicle-fill2;
+            stroke: $svg-vehicle-stroke2;
+            stroke-width: 1px;
+        }
+    }
+    .route3 {
+        &.routeLine {
+            fill: none;
+            stroke: $svg-routeLine3;
+            stroke-width: 2px;
+        }
+
+        &.stop {
+            fill: $svg-stop-fill3;
+            stroke: $svg-stop-stroke3;
+            stroke-width: 1px;
+        }
+
+        &.vehicle {
+            width: 12px;
+            height: 6px;
+            fill: $svg-vehicle-fill3;
+            stroke: $svg-vehicle-stroke3;
+            stroke-width: 1px;
+        }
     }
 
-    .stop {
-        fill: $svg-stop-fill;
-        stroke: $svg-stop-stroke;
-        stroke-width: 1px;
+    .route4 {
+        &.routeLine {
+            fill: none;
+            stroke: $svg-routeLine4;
+            stroke-width: 2px;
+        }
+
+        &.stop {
+            fill: $svg-stop-fill4;
+            stroke: $svg-stop-stroke4;
+            stroke-width: 1px;
+        }
+
+        &.vehicle {
+            width: 12px;
+            height: 6px;
+            fill: $svg-vehicle-fill4;
+            stroke: $svg-vehicle-stroke4;
+            stroke-width: 1px;
+        }
     }
 
-    .vehicle {
-        width: 12px;
-        height: 6px;
-        fill: $svg-vehicle-fill;
-        stroke: $svg-vehicle-stroke;
-        stroke-width: 1px;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: left;
+    width: 150px;
+    height: 28px;
+    padding: 2px;
+    // background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+
+    span.tooltip-s{
+        font-size: 13px;
+    }
+
+    span.tooltip-v{
+        font-size: 16px;
     }
 }
